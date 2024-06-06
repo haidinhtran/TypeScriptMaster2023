@@ -40,4 +40,35 @@ function merge(obj1, obj2) {
 }
 // merrgeObj is any type now is type generic
 const mergedObj = merge({ name: "Hai" }, { pets: ["Cat", "Dog"] });
+console.log(merge({ name: "Hai" }, { num: 9 }));
 console.log(mergedObj);
+function printDoubleLength(thing) {
+    return thing.length * 2;
+}
+console.log(printDoubleLength({ length: 123 }));
+// default value type
+function makeEmptyArray() {
+    return [];
+}
+const numbs = makeEmptyArray();
+const boos = makeEmptyArray();
+class VideoPlaylist {
+    constructor() {
+        this.videos = [];
+    }
+}
+class SongPlaylist {
+    constructor() {
+        this.songs = [];
+    }
+}
+class Playlist {
+    constructor() {
+        this.queue = [];
+    }
+    add(el) {
+        this.queue.push(el);
+    }
+}
+const mySongs = new Playlist();
+mySongs.add({ title: "A", artist: "B" });
