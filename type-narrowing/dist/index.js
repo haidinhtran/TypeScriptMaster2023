@@ -68,3 +68,38 @@ function printName(entity) {
         entity;
     }
 }
+function isCat(animal) {
+    return animal.numLives !== undefined;
+}
+function makeNoise(animal) {
+    if (isCat(animal)) {
+        animal;
+        return "Meow";
+    }
+    else {
+        animal;
+    }
+}
+function getFarmAnimalSound(animal) {
+    switch (animal.kind) {
+        case ("Pig"):
+            return "Oink!";
+        case ("Cow"):
+            return "Moo!";
+        case ("Rooster"):
+            return "Chicken!";
+        case ("Sheep"):
+            return "Baaa!";
+        default:
+            // We should never make it here, if we handle all cases correctly
+            const _exhautedCheck = animal;
+            return _exhautedCheck;
+    }
+}
+const stevie = {
+    name: "Steve Chicks",
+    age: 2,
+    weight: 2,
+    kind: "Rooster"
+};
+console.log(getFarmAnimalSound(stevie));
